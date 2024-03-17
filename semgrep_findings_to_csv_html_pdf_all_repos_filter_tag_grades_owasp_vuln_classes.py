@@ -31,6 +31,7 @@ except KeyError:
 FILTER_IMPORTANT_FINDINGS = False
 
 EPOCH_TIME = '0000'
+# EPOCH_TIME = str(int(time.time())) 
 
 severity_and_state_counts_all_repos = []
 vulnerability_counts_all_repos = []
