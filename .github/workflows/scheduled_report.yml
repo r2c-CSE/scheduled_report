@@ -32,3 +32,17 @@ jobs:
       env:
         SEMGREP_API_WEB_TOKEN: ${{ secrets.SEMGREP_API_WEB_TOKEN }}
       run: python semgrep_findings_to_csv_html_pdf_all_repos_filter_tag_grades_owasp_vuln_classes.py --tag 'portfolio-B'
+
+    - name: Upload HTML report
+      uses: actions/upload-artifact@v2
+      with:
+        name: combined_output_portfolio-B-html
+        path: reports/0000/combined_output_portfolio-B.html
+        # This step uploads the HTML file as an artifact
+
+    - name: Upload PDF report
+      uses: actions/upload-artifact@v2
+      with:
+        name: combined_output_portfolio-B-pdf
+        path: reports/0000/combined_output_portfolio-B.pdf
+        # This step uploads the PDF file as an artifact
