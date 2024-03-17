@@ -29,4 +29,4 @@ jobs:
         sudo apt-get install -y wkhtmltopdf
 
     - name: Run the script
-      run: python scehduled_report.py
+      run: python scheduled_report.py
