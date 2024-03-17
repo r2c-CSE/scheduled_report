@@ -23,8 +23,6 @@ from io import BytesIO
 
 import file_handling_helpers
 
-
-
 try:
     SEMGREP_API_WEB_TOKEN = os.environ["SEMGREP_API_WEB_TOKEN"]
 except KeyError:
@@ -32,7 +30,7 @@ except KeyError:
 
 FILTER_IMPORTANT_FINDINGS = False
 
-EPOCH_TIME = str(int(time.time()))
+EPOCH_TIME = '0000'
 
 severity_and_state_counts_all_repos = []
 vulnerability_counts_all_repos = []
