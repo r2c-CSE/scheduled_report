@@ -29,4 +29,6 @@ jobs:
         sudo apt-get install -y wkhtmltopdf
 
     - name: Run the script
+      env:
+        SEMGREP_API_WEB_TOKEN: ${{ secrets.SEMGREP_API_WEB_TOKEN }}
       run: python semgrep_findings_to_csv_html_pdf_all_repos_filter_tag_grades_owasp_vuln_classes.py
