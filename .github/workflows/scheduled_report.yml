@@ -29,4 +29,4 @@ jobs:
         sudo apt-get install -y wkhtmltopdf
 
     - name: Run the script
-      run: python scheduled_report.py
+      run: python semgrep_findings_to_csv_html_pdf_all_repos_filter_tag_grades_owasp_vuln_classes.py
