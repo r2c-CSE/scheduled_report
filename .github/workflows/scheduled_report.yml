@@ -19,11 +19,14 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r requirements.txt  # Assuming pdfkit is in requirements.txt
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # Install any dependencies your script may have
 
     - name: Install wkhtmltopdf
       run: |
         sudo apt-get update
         sudo apt-get install -y wkhtmltopdf
 
-    # Add your subsequent build steps here
+    - name: Run the script
+      run: python scehduled_report.py
