@@ -22,7 +22,8 @@ from plotly.offline import plot
 import base64
 from io import BytesIO
 
-EPOCH_TIME = str(int(time.time()))
+EPOCH_TIME = '0000'
+# EPOCH_TIME = str(int(time.time())) 
 
 def assign_security_grade(high, medium, low):
     """
