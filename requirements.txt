@@ -4,3 +4,4 @@ FPDF==1.7.2
 pdfkit==1.0.0
 PyPDF2>=2.10.0
 plotly>=5.8.0
+xlsxwriter
